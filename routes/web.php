@@ -15,11 +15,8 @@ use Illuminate\Support\Facades\Mail;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
 
-//Route::get('/', 'ArticlesController@index');  // root sẽ là danh sách bài viết
+Route::get('/', 'ArticlesController@index');  // root sẽ là danh sách bài viết
 
 /*
 Route::get('articles', 'ArticlesController@index');
@@ -51,7 +48,7 @@ Route::patch('articles/{id}', ['as' => 'articles.update', 'uses' => 'ArticlesCon
 Route::delete('articles/{id}', ['as' => 'articles.destroy', 'uses' => 'ArticlesController@destroy']);*/
  //ngắn gọn
 Route::resource('articles', 'ArticlesController');
-
+Route::get('articles/truncate', 'ArticlesController@truncate');
 
 
 Auth::routes();

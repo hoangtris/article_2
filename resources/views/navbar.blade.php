@@ -7,7 +7,7 @@
             </button>
  
             <!-- hiển thị brand -->
-            <a class="navbar-brand" href="#">My Blog</a>
+            <div class="navbar-brand">{!! link_to_route('articles.index', 'My Blog') !!}</div>
         </div>
  
         <!-- Menu -->
