@@ -49,7 +49,7 @@ class ArticlesTableSeeder extends Seeder
         $user = User::all()->first();
         $faker = Faker::create('en_US');
  
-        for ($i = 0; $i < 1000; $i++) {
+        for ($i = 0; $i < 25; $i++) {
             // Article::create([
             //  'title' => $faker->sentence(),
             //  'body' => $faker->paragraph(),

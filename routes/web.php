@@ -48,11 +48,8 @@ Route::patch('articles/{id}', ['as' => 'articles.update', 'uses' => 'ArticlesCon
 Route::delete('articles/{id}', ['as' => 'articles.destroy', 'uses' => 'ArticlesController@destroy']);*/
  //ngắn gọn
 Route::resource('articles', 'ArticlesController');
-Route::get('articles/truncate', 'ArticlesController@truncate');
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::get('/home', 'ArticlesController@index');

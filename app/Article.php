@@ -36,4 +36,10 @@ class Article extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+        // Thêm đoạn này
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag')->withTimestamps();
+    }
 }
